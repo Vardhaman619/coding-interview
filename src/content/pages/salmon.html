@@ -1,8 +1,8 @@
 ---
 title: 'Nehalem Bay Salmon Fishing | Hammerhead Fishing Guide'
-description: 'Dive into the exhilarating world of Salmon fishing in Nehalem Bay with Hammerhead Guide Service. Experience tailored trips during Summer and Fall, promising both adventure and a bountiful catch.'
-preloadImg: ''
-permalink: 'salmon/' 
+description: 'Welcome to Salmon Fishing Guide, your ultimate gateway to an exhilarating world of angling excitement. Embark on a journey where the shimmering waters of pristine rivers and the challenge of the wild collide, offering you the chance to reel in the ultimate catch – the majestic salmon.'
+preloadImg: '/assets/images/salmon-hero.jpg'
+permalink: 'salmon/'
 eleventyNavigation:
     key: Salmon
     parent: Services
@@ -70,6 +70,89 @@ eleventyNavigation:
             }
         });
     </script>
+
+    <!-- ============================================ -->
+    <!--               Salmon Overview                -->
+    <!-- ============================================ -->
+    <section id="salmon-overview" class="cs-section">
+        <div class="cs-container">
+            <div class="image-container">
+                <picture class="cs-picture cs-picture1">
+                    <source media="(max-width: 699px)" srcset="/assets/images/overview.webp">
+                    <source media="(min-width: 700px)" srcset="/assets/images/overview.webp">
+                    <img decoding="async" loading="lazy" src="/assets/images/overview.png" alt="A man holding fish in hand and similing" width="774" height="579">
+                </picture>
+            </div>
+            <div class="text-content">
+                <span class="topper">Overview</span>
+                <h2 class="cs-title">Salmon<br><span class="text-highlight">Guide</span> Service</h2>
+                <p class="cs-text">{{description}}</p>
+                <ul class="list">
+                    <li>
+                        Join our seasoned guides who are not only passionate about salmon fishing
+                    </li>
+                    <li>
+                        Immerse yourself in the tranquility of unspoiled rivers and breathtaking landscapes
+                    </li>
+                    <li>
+                        Whether you're a novice or a seasoned angler, our guides tailor each expedition to match your skill level
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ============================================ -->
+    <!--                Book Our Services             -->
+    <!-- ============================================ -->
+    <section id="salmon-book-our-services" class="cs-section">
+        <div class="cs-container">
+            <div class="text-content">
+                <h2 class="cs-title title">Book our services</h2>
+                <p class="description">Maecenas ornare neque lacinia facilisis accumsan. Quisque auctor ut tortor semper tempor.</p>
+                <a href="/contact/" class="button-solid">Learn More</a>
+            </div>
+            <picture class="img-container">
+                <source media="(max-width: 699px)" srcset="/assets/images/book-our-services.webp">
+                <source media="(min-width: 700px)" srcset="/assets/images/book-our-services.webp">
+                <img decoding="async" loading="lazy" src="/assets/images/book-our-services.png" alt="" width="668" height="502">
+            </picture>
+        </div>
+    </section>
+    
+    <!-- ============================================ -->
+    <!--                Pricing & Packages            -->
+    <!-- ============================================ -->
+   <section class="cs-section" id="salmon-pricing-and-packages" >
+        <h2 class="cs-title title">Pricing & Packages</h2>
+        <div class="container">
+            <div class="item">
+                <p class="label">Full Day</p>
+                <div class="price-container">
+                    <h3 class="price cs-title">$300</h3>
+                    <small>20% Discount</small>
+                </div>
+                <p class="description">Praesent sit amet sagittis tellus, ac aliquam lacus.</p>
+            </div>
+            <div class="item">
+                <p class="label">Half-Day</p>
+                <div class="price-container">
+                    <h3 class="price cs-title">$150</h3>
+                    <small>20% Discount</small>
+                </div>
+                <p class="description">Praesent sit amet sagittis tellus, ac aliquam lacus.</p>
+            </div>
+            <div class="item">
+                <p class="label">Special Package</p>
+                <div class="price-container">
+                    <h3 class="price cs-title">$450</h3>
+                    <small>20% discount</small>
+                </div>
+                <p class="description">Praesent sit amet sagittis tellus, ac aliquam lacus.</p>
+            </div>
+        </div>
+    </section>
+
 
 
 {% endblock %}

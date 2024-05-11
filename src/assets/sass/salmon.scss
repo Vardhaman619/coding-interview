@@ -7,42 +7,295 @@
     object-fit: cover;
 }
 
-#salmon-overview{
+/*-- -------------------------- -->
+<---      salmon-overview       -->
+<--- -------------------------- -*/
+#salmon-overview {
+    .cs-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
 
-    .image-group {
-        width: calc(730 / 16 * 1em);
-        height: calc(561 / 16 * 1em);
+        .image-container {
+            max-width: 580px;
+            margin: auto;
 
-        .cs-picture1 {
-            width: calc(730 / 16 * 1em);
-            height: calc(561 / 16 * 1em);
+            img {
+                max-width: 100%;
+                height: auto;
+                vertical-align: middle;
+                font-style: italic;
+                background-repeat: no-repeat;
+                background-size: cover;
+                shape-margin: 1rem;
+            }
+        }
+
+        .text-content {
+            max-width: 750px;
+            margin: auto;
+
+            .topper {
+                display: inline-block;
+                width: 100%;
+            }
+
+            .cs-text {
+                max-width: 68ch;
+            }
+
+            .list {
+                padding-left: 16px;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                font-size: 18px;
+                line-height: 30px;
+                max-width: 68ch;
+
+                li::marker {
+                    color: var(--primary);
+                }
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width: 600px) {
+    #salmon-overview {
+        .cs-container {
+            .image-container {
+                max-width: 700px;
+            }
+
+            .text-content {
+
+                .topper,
+                .cs-title {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    #salmon-overview {
+        .cs-container {
+            flex-direction: row;
+
+            .image-container {
+                flex-basis: 50%;
+                flex: 1;
+                max-width: none;
+            }
+
+            .text-content {
+                flex-basis: 50%;
+                flex: 1;
+
+                .topper,
+                .cs-title {
+                    text-align: left;
+                }
+            }
         }
     }
 }
 
 
-#salmon-location{
+/*-- -------------------------- -->
+<---  salmon-book-our-services  -->
+<--- ----------------------------*/
+#salmon-book-our-services {
+    .cs-container {
+        background-color: var(--secondary);
+        overflow: hidden;
+        max-height: 364px;
+        border-radius: 27px;
+        display: flex;
+        align-self: center;
 
-    .image-group {
-        width: calc(598 / 16 * 1em);
-        height: calc(536 / 16 * 1em);
+        .text-content {
+            padding: 32px;
+            text-align: center;
 
-        .cs-picture1 {
-            width: calc(598 / 16 * 1em);
-            height: calc(536 / 16 * 1em);
+            .title {
+                font-size: clamp(32px, 4vw, 48px);
+            }
+
+            .description {
+                margin-bottom: 43px;
+            }
+
+            .title,
+            .description {
+                color: white;
+                max-width: 65ch;
+            }
+        }
+
+        .img-container {
+            display: none;
+            clip-path: circle(70% at 73% 50%);
+
+            img {
+                max-width: 100%;
+                height: 100%;
+                vertical-align: middle;
+                font-style: italic;
+                background-repeat: no-repeat;
+                background-size: cover;
+                shape-margin: 1rem;
+                object-fit: cover;
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width: 780px) {
+    #salmon-book-our-services {
+
+        .cs-container {
+            .text-content {
+                padding: 38px;
+                text-align: left;
+
+                .title,
+                .description {
+                    color: white;
+                }
+
+                .description {
+                    max-width: 60ch;
+                }
+            }
+
+            .img-container {
+                display: block;
+            }
         }
     }
 }
 
-#salmon-bring{
+@media only screen and (min-width: 1024px) {
+    #salmon-book-our-services {
+        .cs-container {
+            .text-content {
+                flex-shrink: 0;
+                padding: 41px;
+            }
+        }
+    }
+}
 
-    .image-group {
-        width: calc(747 / 16 * 1em);
-        height: calc(690 / 16 * 1em);
 
-        .cs-picture1 {
-            width: calc(747 / 16 * 1em);
-            height: calc(690 / 16 * 1em);
+/*-- -------------------------- -->
+<--- salmon-pricing-and-packages-->
+<--- ----------------------------*/
+#salmon-pricing-and-packages {
+    .title {
+        font-size: clamp(28px, 3.5vw, 42px);
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .container {
+        max-width: 1025px;
+        margin: auto;
+        border-radius: 19px;
+        background-color: #D9D9D9;
+        display: grid;
+        padding: 39px 35px;
+        grid-column-gap: clamp(24px, 2.5vw, 30px);
+        grid-row-gap: clamp(20px, 2.25vw, 28px);
+
+        .label {
+            color: #145FA4;
+            font-weight: bold;
+            font-size: clamp(15px, 2vw, 20px);
+            line-height: 170%;
+        }
+
+        .item {
+            background-color: white;
+            padding: 30px;
+            border-radius: 26px;
+
+            .price-container {
+                display: flex;
+                gap: 8px;
+                align-items: baseline;
+
+                .price {
+                    color: black;
+                    font-size: clamp(32px, 3vw, 40px);
+                }
+
+                small {
+                    font-weight: 500;
+                    size: 18px;
+                }
+            }
+
+            .description {
+                font-weight: 500;
+            }
+
+            &:first-child {
+
+                .price-container {
+
+                    .price {
+                        color: var(--primary);
+                    }
+
+                }
+
+            }
+
+            &:last-child {
+                background-color: var(--secondary);
+
+                .label,
+                .description {
+                    color: white;
+                }
+
+                .price-container {
+
+                    .price,
+                    small {
+                        color: white;
+                    }
+                }
+
+                .description {
+                    font-weight: 400;
+                }
+            }
+        }
+
+
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    #salmon-pricing-and-packages {
+
+        .container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    #salmon-pricing-and-packages {
+    
+        .container {
+            grid-template-columns: repeat(3, 1fr);
         }
     }
 }
