@@ -200,7 +200,11 @@
         font-size: clamp(28px, 3.5vw, 42px);
         text-align: center;
         margin-bottom: 30px;
+        .primary-color{
+            color: var(--primary);
+        }
     }
+
 
     .container {
         max-width: 1025px;
@@ -208,7 +212,7 @@
         border-radius: 19px;
         background-color: #D9D9D9;
         display: grid;
-        padding: 39px 35px;
+        padding: 25px 30px;
         grid-column-gap: clamp(24px, 2.5vw, 30px);
         grid-row-gap: clamp(20px, 2.25vw, 28px);
 
@@ -221,14 +225,15 @@
 
         .item {
             background-color: white;
-            padding: 30px;
+            padding: 22px;
             border-radius: 26px;
 
             .price-container {
                 display: flex;
-                gap: 8px;
                 align-items: baseline;
-
+                flex-wrap: wrap;
+                margin-bottom: 10px;
+                gap: 0px 8px ;
                 .price {
                     color: black;
                     font-size: clamp(32px, 3vw, 40px);
@@ -241,6 +246,7 @@
             }
 
             .description {
+                font-size: 14px;
                 font-weight: 500;
             }
 
@@ -286,7 +292,14 @@
     #salmon-pricing-and-packages {
 
         .container {
+        padding: 35px 30px;
             grid-template-columns: repeat(2, 1fr);
+            .item{
+            padding: 30px;
+            .description{
+                font-size: 16px;
+            }
+            }
         }
     }
 }
@@ -295,6 +308,7 @@
     #salmon-pricing-and-packages {
     
         .container {
+        padding: 39px 35px;
             grid-template-columns: repeat(3, 1fr);
         }
     }
